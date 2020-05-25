@@ -121,10 +121,10 @@ def test_assignment_3():
     # Brazil
 
     brazil = result['Brazil']
-    assert len(brazil) == 1  # Only midfielders
+    assert len(brazil) == 6  
 
     br_midfielders = brazil['MF']
-    assert len(br_midfielders) == 6
+    assert len(br_midfielders) == 1 # Only midfielders
 
     assert br_midfielders[0] == {
         'caps': '29',
