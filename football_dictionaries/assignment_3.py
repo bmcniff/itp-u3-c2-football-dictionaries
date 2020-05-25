@@ -15,8 +15,8 @@ def players_by_country_and_position(squads_list):
         position = player[1]
         result.setdefault(position, [])
         result[position].append(player_dict)
-    for position, player in result.items():
-        country = player[0]['country']
-        final.setdefault(country, {})
-        final[country].update({position : player})
+    for player in SQUADS_DATA:
+        country = player[6]
+        final.setdefault(country, [])
+        final[country].append({position : player})
     return final
